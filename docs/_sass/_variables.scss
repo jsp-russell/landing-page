@@ -1,0 +1,30 @@
+$font-family-sans-serif: "Quicksand", "Open Sans", sans-serif, !default;
+$font-family-monospace: "Source Code Pro", monospace !default;
+$font-size-base: 0.9rem !default;
+
+$mint: #2BB669ff;
+$gold: #ffd700ff;
+$moonstone: #34a3adff;
+$polynesian-blue: #08448Eff;
+$bistre: #3a2a22ff;
+$un-blue: #5591ccff;
+$persian-red: #C0392Bff;
+$dark-purple: #0e082aff;
+$snow: #fffbf9ff;
+
+$black: #000000ff;
+$white: #ffffffff;
+
+$theme-colors: (
+  "primary":    $polynesian-blue,
+  "secondary":  $bistre,
+  "success":    $mint,
+  "info":       $un-blue,
+  "warning":    $gold,
+  "danger":     $persian-red,
+  "light":      $snow,
+  "dark":       $dark-purple
+);
+
+$enable-rounded: false;
+$enable-shadows: true;

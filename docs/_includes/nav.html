@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ '/' | prepend: site.baseurl }}">{{ site.title }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        {% for item in site.data.navbar %}
+        {% if item.dropdown %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink{{ forloop.index }}" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            {{ item.title }}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink{{ forloop.index }}">
+            {% for subitem in item.dropdown %}
+            <li><a class="dropdown-item{% if page.url == subitem.url %} active{% endif %}" href="{{ subitem.url | prepend: site.baseurl }}">{{ subitem.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link{% if page.url == item.url %} active{% endif %}" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+  </div>
+</nav>
