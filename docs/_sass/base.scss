@@ -1,13 +1,34 @@
 .image-section {
     position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-section.inside {
     background: url("../img/inside-img.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
+}
+
+.image-section.ocean {
+    background: url("../img/ocean-img.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    overflow: hidden;
+    background: url("../img/ocean-img.png") no-repeat center center fixed;
+    z-index: -1;
 }
 
 .overlay {
@@ -34,9 +55,28 @@ h1, p {
 .fixed-bottom {
     position: fixed;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(10px); 
-    border-top: 1px solid rgba(255, 255, 255, 0.2); 
     z-index: 1000; 
     width: 100%;
+}
+
+footer.fixed-bottom {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); 
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+body {
+    background-color: $snow;
+}
+
+.card-peek {
+    height: 80vh;
+    width: 100%;
+    background-color: $snow;
+}
+
+@media (max-width: 767.98px) {
+    .card-peek {
+        border-radius: .2rem;
+    }
 }

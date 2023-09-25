@@ -1,0 +1,42 @@
+---
+show_footer: false
+layout: default
+title: Notice and Disclaimer
+---
+
+<section class="image-section ocean">
+    <div class="overlay"></div>
+    <div class="container text-center fixed-bottom">
+        <div class="row justify-content-center align-items-center flex-column" style="-webkit-tap-highlight-color: transparent;">
+            <div class="col-8">
+                <div class="card shadow-strong card-peek rounded-top pt-5 px-5 pb-2 d-flex flex-column">
+                    <div>
+                        <h2 class="card-title">{{ page.title }}</h2>
+                        <hr>
+                        <p class="text-monospace text-body my-4">
+                            {{ site.title }} is currently a research and development project and is not yet a legally incorporated or commercial entity. The information, branding, and content provided on this website are for informational and experimental purposes only and do not constitute a commercial offer or solicitation.
+                        </p>
+                        <hr class="mx-auto w-100 mb-4">
+                        <a href="/" class="btn btn-outline-dark btn-lg w-100">
+                            <i class="bi bi-house"></i> Home
+                        </a>
+                    </div>
+                    <div class="mt-auto">
+                        <small>
+                            <p class="text-monospace text-body">
+                                <strong>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. All rights reserved for site content </strong> <br> (e.g. branding, images, and copy).
+                            </p>
+                            <p class="text-monospace text-body">
+                                <strong>
+                                    Source code is licensed under the 
+                                    <a href="https://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank" rel="noopener noreferrer">Apache License 2.0</a>.
+                                </strong>
+                            </p>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
