@@ -14,7 +14,7 @@ source "https://rubygems.org"
 gem "github-pages", "~> 228", group: :jekyll_plugins
 
 
-gem 'faraday-retry', "~> 2.2.0" # for retrying failed requests
+# gem 'faraday-retry', "~> 2.2.0" # for retrying failed requests
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
